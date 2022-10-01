@@ -41,8 +41,24 @@ header {
     border-right: 2px solid white;
   }
   
+  .info {
+    color: white;
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 20px 200px;
+    grid-gap: 20px;
+  }
+
+  .texthide {
+      opacity: 0;
+  }
+
+  .texthide:hover {
+    opacity: 1;
+  } 
+
   
-  
+
 
   .year {
     position: relative;
@@ -64,8 +80,9 @@ header {
     margin: 0 0px 0px 0px;  /* this is for changing space between cards */
     padding: 10px;
     background: rgb(180, 180, 180);
-    color: gray;
+    color: rgb(255, 255, 255);
     border-radius: 16px;
+
   }
 
   .card:hover {
