@@ -2,6 +2,9 @@
     --primary-color: rgb(254, 0, 0); /* try #212121 also for dark mode */
     --background-color: #7c7c7c;
     --font: sans-serif;
+    --card-color: #9c9c9c;
+    --card-color-hover: #d0d0d0;
+
   }
   
   * {
@@ -10,11 +13,12 @@
   }
 
   header {
-    width: 100%
+    width: 100%;
+    height: 50px;
   } 
 
   body {
-    background: var(--background-color);
+    background: var(--background-color) ;
     font-family: var(--font);
     justify-content: center;
   }
@@ -23,17 +27,17 @@
 
   .grid_container {
     display: inline-grid;
-    grid-template-columns: 200px 60px 60px;
+    grid-template-columns: 200px 60px 60px 60px 60px 60px 60px;
   } /* thing for keeping multiple rows of satellites */
 
   .years {
     background: var(--background-color);
-    margin: 10px;
+    margin: 0 10px;
   } /* row of years */
   
   .timeline {
     background: var(--background-color);
-    margin: 10px;
+    margin: 0 10px;
   }
 
 
@@ -42,24 +46,26 @@
   }
   
   .cardtext {
-      opacity: 0;
+      display: none;
       padding: 10px;
       margin: -70px -10px;
       padding: 0px 60px;
   }
   
   
-  .cardtext:hover {
-      opacity: 1;
+  .card:hover > .cardtext {
+      display: block;
   }
   
 
   .year {
     position: relative;
-    margin: 0 20px 20px 20px;
-    padding: 30px 10px ;
+    margin: 0 20px 0px 20px;
+    padding: 65px 10px ;
     border-radius: 8px;
     max-width: 400px;
+    font-size: 20px;
+    height: 20px;
   }
   
  
@@ -70,17 +76,19 @@
     text-orientation: mixed;
   }
   .card {
-    position: relative;
-    margin: 0 0px 0px 0px;  /* this is for changing space between cards */
+    position: absolute;
+    margin: -10px 0px 0px 0px;  /* this is for changing space between cards */
     padding: 10px;
-    background: rgb(180, 180, 180);
+    background: var(--card-color);
     color: rgb(255, 255, 255);
     border-radius: 16px;
 
   }
   .card:hover {
-    background: rgb(180, 180, 180);
-    width: 300px
+    background: var(--card-color-hover);
+    width: 300px;
+    min-height: 200px !important;
+
   }
   .title_year {
     color: white;
@@ -96,8 +104,7 @@
     height: 10px;
     background: white;
     border-radius: 999px;
-    right: -39px;
-    border: 3px solid white;
+    right: -36.5px;
   }
 
 
@@ -116,10 +123,11 @@
     position: relative;
     margin: 0 30px 20px 20px;  /* this is for changing space between cards */
     padding: 0px 30px ;
-    background: rgb(180, 180, 180);
+    background: var(--card-color);
     color: rgb(255, 255, 255);
     border-radius: 16px;
     width: 150px;
+    height: 37px;
 
   }
 
@@ -175,3 +183,22 @@
     left: -59px;
     border: 3px solid white;
   }
+
+  .expandedview {
+    background-color: lightgray;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -900px;
+    top: 20px;
+    border-radius: 16px;
+    padding: 20px;
+    display: none;
+
+  }
+  .card_satprog:hover > .expandedview {
+    display: block;
+    
+  }
+
+
