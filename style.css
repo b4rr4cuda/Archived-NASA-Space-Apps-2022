@@ -1,10 +1,4 @@
-h1 {
-    color: #0ff1ce;
-}
-header {
-    width: 100%
-}
-:root {
+  :root {
     --primary-color: rgb(254, 0, 0); /* try #212121 also for dark mode */
     --background-color: #7c7c7c;
     --font: sans-serif;
@@ -14,51 +8,51 @@ header {
     margin: 0;
     padding: 0;
   }
-  
 
-  
+  header {
+    width: 100%
+  } 
+
   body {
     background: var(--background-color);
     font-family: var(--font);
     justify-content: center;
   }
+
+  /* homepage timeline stuff */
+
   .grid_container {
     display: inline-grid;
     grid-template-columns: 200px 60px 60px;
-  }
+  } /* thing for keeping multiple rows of satellites */
 
   .years {
     background: var(--background-color);
     margin: 10px;
-  }
+  } /* row of years */
   
   .timeline {
     background: var(--background-color);
     margin: 10px;
   }
 
+
   .outer {
     border-right: 2px solid white;
   }
   
-  .info {
-    color: white;
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 20px 200px;
-    grid-gap: 20px;
-  }
-
-  .texthide {
+  .cardtext {
       opacity: 0;
+      padding: 10px;
+      margin: -70px -10px;
+      padding: 0px 60px;
   }
-
-  .texthide:hover {
-    opacity: 1;
-  } 
-
   
-
+  
+  .cardtext:hover {
+      opacity: 1;
+  }
+  
 
   .year {
     position: relative;
@@ -84,7 +78,6 @@ header {
     border-radius: 16px;
 
   }
-
   .card:hover {
     background: rgb(180, 180, 180);
     width: 300px
@@ -93,6 +86,8 @@ header {
     color: white;
     position: relative;
   }
+
+
   /* Timeline dot  */
   .title_year::before {
     content: "";
@@ -102,5 +97,81 @@ header {
     background: white;
     border-radius: 999px;
     right: -39px;
+    border: 3px solid white;
+  }
+
+
+  
+  /* SATPROG stuff */
+  .timeline_satprog {
+    background: var(--background-color);
+    margin: 10px 80px;
+  }
+
+  .outer_satprog {
+    border-left: 2px solid white;
+  }
+
+  .card_satprog {
+    position: relative;
+    margin: 0 30px 20px 20px;  /* this is for changing space between cards */
+    padding: 0px 30px ;
+    background: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    width: 150px;
+
+  }
+
+  .card_satprog_mention {
+    position: relative;
+    margin: 0 30px 20px 20px;  /* this is for changing space between cards */
+    padding: 0px 30px ;
+    color: rgb(255, 255, 255);
+    width: 150px;
+
+
+
+  }
+
+
+  .year_satprog{
+      position: relative;
+      top: 10px;
+      right: 100px;
+  }
+
+
+  .title_satprog {
+    color: white;
+    position: relative;
+    top: -10px;
+  }
+
+  .title_satprog_mention {
+    color: rgb(190, 190, 190);
+    position: relative;
+    top: -10px;
+  }
+  /* Timeline dot  */
+  .title_satprog::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -59px;
+    border: 3px solid white;
+  }
+
+  .title_satprog_mention::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -59px;
     border: 3px solid white;
   }
