@@ -1,8 +1,4 @@
-
-header {
-    width: 100%
-}
-:root {
+  :root {
     --primary-color: rgb(254, 0, 0); /* try #212121 also for dark mode */
     --background-color: #7c7c7c;
     --font: sans-serif;
@@ -12,40 +8,37 @@ header {
     margin: 0;
     padding: 0;
   }
-  
 
-  
+  header {
+    width: 100%
+  } 
+
   body {
     background: var(--background-color);
     font-family: var(--font);
     justify-content: center;
   }
+
+  /* homepage timeline stuff */
+
   .grid_container {
     display: inline-grid;
     grid-template-columns: 200px 60px 60px;
-  }
+  } /* thing for keeping multiple rows of satellites */
 
   .years {
     background: var(--background-color);
     margin: 10px;
-  }
+  } /* row of years */
   
   .timeline {
     background: var(--background-color);
     margin: 10px;
   }
 
-  .timeline_satprog {
-    background: var(--background-color);
-    margin: 10px 80px;
-  }
 
   .outer {
     border-right: 2px solid white;
-  }
-
-  .outer_satprog {
-    border-left: 2px solid white;
   }
   
   .cardtext {
@@ -60,8 +53,6 @@ header {
       opacity: 1;
   }
   
-  
-
 
   .year {
     position: relative;
@@ -86,6 +77,39 @@ header {
     color: rgb(255, 255, 255);
     border-radius: 16px;
 
+  }
+  .card:hover {
+    background: rgb(180, 180, 180);
+    width: 300px
+  }
+  .title_year {
+    color: white;
+    position: relative;
+  }
+
+
+  /* Timeline dot  */
+  .title_year::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    right: -39px;
+    border: 3px solid white;
+  }
+
+
+  
+  /* SATPROG stuff */
+  .timeline_satprog {
+    background: var(--background-color);
+    margin: 10px 80px;
+  }
+
+  .outer_satprog {
+    border-left: 2px solid white;
   }
 
   .card_satprog {
@@ -114,28 +138,9 @@ header {
   .year_satprog{
       position: relative;
       top: 10px;
-      right: 110px;
+      right: 100px;
   }
 
-  .card:hover {
-    background: rgb(180, 180, 180);
-    width: 300px
-  }
-  .title_year {
-    color: white;
-    position: relative;
-  }
-  /* Timeline dot  */
-  .title_year::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 999px;
-    right: -39px;
-    border: 3px solid white;
-  }
 
   .title_satprog {
     color: white;
