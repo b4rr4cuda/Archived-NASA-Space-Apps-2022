@@ -41,22 +41,18 @@ header {
     border-right: 2px solid white;
   }
   
-  .info {
-    color: white;
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 20px 200px;
-    grid-gap: 20px;
-  }
-
-  .texthide {
+  .cardtext {
       opacity: 0;
+      padding: 10px;
+      margin: -70px -10px;
+      padding: 0px 60px;
   }
-
-  .texthide:hover {
-    opacity: 1;
-  } 
-
+  
+  
+  .cardtext:hover {
+      opacity: 1;
+  }
+  
   
 
 
