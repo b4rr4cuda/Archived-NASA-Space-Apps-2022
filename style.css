@@ -31,11 +31,16 @@
     padding: 0 40px;
   }
 
+  h2 {
+    color: white;
+    padding: 60px 200px;
+  }
+
   /* homepage timeline stuff */
 
   .grid_container {
     display: inline-grid;
-    grid-template-columns: 200px 60px 60px 60px 60px 60px 60px;
+    grid-template-columns: 200px 60px 60px 60px 60px 60px 60px 1200px;
   } /* thing for keeping multiple rows of satellites */
 
   .years {
