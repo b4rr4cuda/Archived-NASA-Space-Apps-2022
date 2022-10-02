@@ -1,6 +1,4 @@
-h1 {
-    color: #0ff1ce;
-}
+
 header {
     width: 100%
 }
@@ -37,8 +35,17 @@ header {
     margin: 10px;
   }
 
+  .timeline_satprog {
+    background: var(--background-color);
+    margin: 10px 80px;
+  }
+
   .outer {
     border-right: 2px solid white;
+  }
+
+  .outer_satprog {
+    border-left: 2px solid white;
   }
   
   .cardtext {
@@ -81,6 +88,35 @@ header {
 
   }
 
+  .card_satprog {
+    position: relative;
+    margin: 0 30px 20px 20px;  /* this is for changing space between cards */
+    padding: 0px 30px ;
+    background: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    width: 150px;
+
+  }
+
+  .card_satprog_mention {
+    position: relative;
+    margin: 0 30px 20px 20px;  /* this is for changing space between cards */
+    padding: 0px 30px ;
+    color: rgb(255, 255, 255);
+    width: 150px;
+
+
+
+  }
+
+
+  .year_satprog{
+      position: relative;
+      top: 10px;
+      right: 110px;
+  }
+
   .card:hover {
     background: rgb(180, 180, 180);
     width: 300px
@@ -98,5 +134,39 @@ header {
     background: white;
     border-radius: 999px;
     right: -39px;
+    border: 3px solid white;
+  }
+
+  .title_satprog {
+    color: white;
+    position: relative;
+    top: -10px;
+  }
+
+  .title_satprog_mention {
+    color: rgb(190, 190, 190);
+    position: relative;
+    top: -10px;
+  }
+  /* Timeline dot  */
+  .title_satprog::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -59px;
+    border: 3px solid white;
+  }
+
+  .title_satprog_mention::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -59px;
     border: 3px solid white;
   }
