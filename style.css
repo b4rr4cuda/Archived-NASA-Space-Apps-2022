@@ -2,8 +2,8 @@
     --primary-color: rgb(254, 0, 0); /* try #212121 also for dark mode */
     --background-color: #7c7c7c;
     --font: sans-serif;
-    --card-color: #9c9c9c;
-    --card-color-hover: #d0d0d0;
+    --card-color: rgba(150,150,150,0.5);
+    --card-color-hover: rgba(150,150,150,0.9);
 
   }
   
@@ -18,9 +18,17 @@
   } 
 
   body {
-    background: var(--background-color) ;
+    background-image: url("img/daspace.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 2560px 1440px;
     font-family: var(--font);
     justify-content: center;
+  }
+
+  h1 {
+    color: rgb(255, 191, 0);
+    padding: 0 40px;
   }
 
   /* homepage timeline stuff */
@@ -31,12 +39,11 @@
   } /* thing for keeping multiple rows of satellites */
 
   .years {
-    background: var(--background-color);
     margin: 0 10px;
   } /* row of years */
   
   .timeline {
-    background: var(--background-color);
+
     margin: 0 10px;
   }
 
@@ -48,8 +55,9 @@
   .cardtext {
       display: none;
       padding: 10px;
-      margin: -70px -10px;
       padding: 0px 60px;
+      position: absolute;
+      top: 10px;
   }
   
   
@@ -82,12 +90,14 @@
     background: var(--card-color);
     color: rgb(255, 255, 255);
     border-radius: 16px;
+    transition: background 1s ease-in-out;
 
   }
   .card:hover {
     background: var(--card-color-hover);
     width: 300px;
-    min-height: 200px !important;
+    min-height: 300px !important;
+    transition: all 1s ease-in-out;
 
   }
   .title_year {
@@ -107,12 +117,18 @@
     right: -36.5px;
   }
 
-
+  .pixel{
+    image-rendering: optimizeSpeed;             /* Legal fallback */
+    image-rendering: -moz-crisp-edges;          /* Firefox        */
+    image-rendering: -o-crisp-edges;            /* Opera          */
+    image-rendering: -webkit-optimize-contrast; /* Safari         */
+    image-rendering: pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+           */
+  }
   
   /* SATPROG stuff */
   .timeline_satprog {
-    background: var(--background-color);
-    margin: 10px 80px;
+    margin: 10px 180px;
   }
 
   .outer_satprog {
@@ -146,7 +162,7 @@
   .year_satprog{
       position: relative;
       top: 10px;
-      right: 100px;
+      right: 200px;
   }
 
 
@@ -161,6 +177,7 @@
     position: relative;
     top: -10px;
   }
+  
   /* Timeline dot  */
   .title_satprog::before {
     content: "";
@@ -185,7 +202,7 @@
   }
 
   .expandedview {
-    background-color: lightgray;
+    background: rgba(150,150,150,0);
     position: absolute;
     width: 500px;
     height: 500px;
@@ -193,11 +210,14 @@
     top: 20px;
     border-radius: 16px;
     padding: 20px;
-    display: none;
+    visibility: hidden;
 
   }
   .card_satprog:hover > .expandedview {
     display: block;
+    background: var(--card-color-hover);
+    transition: background 1s ease-in;
+    visibility: visible;
     
   }
 
