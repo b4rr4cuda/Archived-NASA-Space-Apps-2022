@@ -96,7 +96,7 @@
   .card:hover {
     background: var(--card-color-hover);
     width: 300px;
-    min-height: 300px !important;
+    min-height: 500px !important;
     transition: all 1s ease-in-out;
 
   }
@@ -177,7 +177,7 @@
     position: relative;
     top: -10px;
   }
-  
+
   /* Timeline dot  */
   .title_satprog::before {
     content: "";
